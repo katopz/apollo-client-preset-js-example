@@ -2,21 +2,24 @@ import * as React from 'react'
 import gql from 'graphql-tag'
 import { graphql } from 'react-apollo'
 
+// Example query from https://www.graph.cool/
 const SERVICE_QUERY = gql`
 {
-  allServices {
+  Movie(id: "cixos5gtq0ogi0126tvekxo27") {
     id
-    name
-    pingURL
+    title
+    actors {
+       name
+    }
   }
 }
 `
 
 const withService = graphql(SERVICE_QUERY)
 export default withService(({ data }) => {
-  const { loading, allServices } = data
+  const { loading, Movie } = data
   if (loading) return <div>loading...</div>
-  if (!allServices) return <div>Forget to config YOUR_GRAPHQL_END_POINT ?</div>
+  if (!Movie) return <div>Forget to config <b>endpoint</b> at <b>package.json</b>?</div>
 
-  return <p>{allServices[0].name}</p>
+  return <p><b>{Movie.title}</b> : {Movie.actors.map(({ name }) => name).join(', ')}</p>
 })
