@@ -3,7 +3,7 @@ import gql from 'graphql-tag'
 import { graphql } from 'react-apollo'
 
 // Example query from https://www.graph.cool/
-const SERVICE_QUERY = gql`
+const MOVIE_QUERY = gql`
 {
   Movie(id: "cixos5gtq0ogi0126tvekxo27") {
     id
@@ -15,7 +15,7 @@ const SERVICE_QUERY = gql`
 }
 `
 
-const withService = graphql(SERVICE_QUERY)
+const withService = graphql(MOVIE_QUERY)
 export default withService(({ data }) => {
   const { loading, Movie } = data
   if (loading) return <div>loading...</div>
