@@ -4,11 +4,12 @@
   "private": true,
   "endpoint": "https://api.graph.cool/simple/v1/cixos23120m0n0173veiiwrjr",
   "dependencies": {
-    "apollo-client-preset": "^0.2.0-beta.8",
+    "apollo-client-preset": "^1.0.2",
+    "graphql": "^0.11.7",
     "react": "^16.0.0",
-    "react-apollo": "^2.0.0-beta.0",
+    "react-apollo": "^2.0.0",
     "react-dom": "^16.0.0",
-    "react-scripts": "1.0.14"
+    "react-scripts": "1.0.17"
   },
   "scripts": {
     "start": "react-scripts start",
