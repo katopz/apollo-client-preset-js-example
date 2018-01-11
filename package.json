@@ -1,14 +1,15 @@
 {
   "name": "apollo-client-preset-js-example",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
-  "endpoint": "https://api.graph.cool/simple/v1/cixos23120m0n0173veiiwrjr",
   "dependencies": {
-    "apollo-client-preset": "^0.2.0-beta.8",
-    "react": "^16.0.0",
-    "react-apollo": "^2.0.0-beta.0",
-    "react-dom": "^16.0.0",
-    "react-scripts": "1.0.14"
+    "apollo-client-preset": "^1.0.6",
+    "graphql": "^0.12.3",
+    "npm-check-updates": "^2.14.0",
+    "react": "^16.2.0",
+    "react-apollo": "^2.0.4",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.0.17"
   },
   "scripts": {
     "start": "react-scripts start",
